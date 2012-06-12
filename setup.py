@@ -1,16 +1,17 @@
 import os
 from setuptools import setup, find_packages
 
-from myapp import VERSION
+from myapp import __version__
+
 
 def read(fname):
     return open(os.path.join(os.path.dirname(__file__), fname)).read()
-    
+
 requirements = []
 
 setup(
     name = "My App",
-    version = ".".join(map(str, VERSION)),
+    version = ".".join(map(str, __version__)),
     description = "",
     long_description = read('README.rst'),
     url = '',
@@ -29,6 +30,5 @@ setup(
         #'Framework :: Django',
     ],
     install_requires = requirements,
-    tests_require = ["nose",],
-    test_suite = "nose.collector",
+    tests_require = [],
 )
