@@ -19,6 +19,7 @@ setup(
     author = 'Full Name',
     author_email = 'email@email.org',
     packages = find_packages(exclude=['tests']),
+    include_package_data = True,
     classifiers = [
         'Development Status :: 3 - Alpha',
         'Environment :: Console',
